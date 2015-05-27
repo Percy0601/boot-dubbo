@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>cn.creditease</groupId>
+	<artifactId>boot-dubbo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Nexus Release Repository</name>
+			<url>http://10.10.108.132:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://10.10.108.132:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>nexus</id>
+			<name>Team Nexus Repository</name>
+			<url>http://10.10.108.132:8081/nexus/content/groups/public</url>
+		</repository>
+
+		<repository>
+			<id>offical</id>
+			<name>Maven Official Repository</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>nexus</id>
+			<name>Team Nexus Repository</name>
+			<url>http://10.10.108.132:8081/nexus/content/groups/public</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>offical</id>
+			<name>Maven Official Repository</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</pluginRepository>
+	</pluginRepositories>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.2.3.RELEASE</version>
+		<relativePath/>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.7</java.version>
+	</properties>
+	<modules>
+		<module>boot-dubbo-api</module>
+		<module>boot-dubbo-service</module>
+    <module>boot-dubbo-web</module>
+    <module>boot-dubbo-normal-client</module>
+    <module>boot-dubbo-simple</module>
+  </modules>
+</project>

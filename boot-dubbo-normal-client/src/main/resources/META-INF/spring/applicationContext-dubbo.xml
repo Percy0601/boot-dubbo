@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	<dubbo:application name="dubbox-demo-client" />
+	<!-- 使用multicast广播注册中心暴露发现服务地址 -->
+	<!-- <dubbo:registry address="multicast://224.0.0.0:1234" /> -->
+	<dubbo:registry protocol="zookeeper" address="10.10.108.132.:2181" />
+	<dubbo:monitor protocol="registry" />
+	<dubbo:reference id="userService" interface="boot.dubbo.api.UserService"   protocol="rest"/>
+</beans>
