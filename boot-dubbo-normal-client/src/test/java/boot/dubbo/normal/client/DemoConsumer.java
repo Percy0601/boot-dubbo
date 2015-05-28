@@ -37,7 +37,7 @@ public class DemoConsumer {
 			List<User> users = userService.findAll();
 			System.out.println("返回结果：" + "size:" + users.size() );
 			try {
-				Thread.sleep(5000);
+				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
