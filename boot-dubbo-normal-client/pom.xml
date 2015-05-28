@@ -8,6 +8,45 @@
 	<artifactId>boot-dubbo-normal-client</artifactId>
 	<name>boot-dubbo-normal-client</name>
 	<url>http://maven.apache.org</url>
+
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Nexus Release Repository</name>
+			<url>http://10.10.108.132:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://10.10.108.132:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>nexus</id>
+			<name>Team Nexus Repository</name>
+			<url>http://10.10.108.132:8081/nexus/content/groups/public</url>
+		</repository>
+
+		<repository>
+			<id>offical</id>
+			<name>Maven Official Repository</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>nexus</id>
+			<name>Team Nexus Repository</name>
+			<url>http://10.10.108.132:8081/nexus/content/groups/public</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>offical</id>
+			<name>Maven Official Repository</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</pluginRepository>
+	</pluginRepositories>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jdk.version>1.7</jdk.version>

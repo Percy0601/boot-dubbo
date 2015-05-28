@@ -8,5 +8,5 @@
 	<!-- <dubbo:registry address="multicast://224.0.0.0:1234" /> -->
 	<dubbo:registry protocol="zookeeper" address="10.10.108.132.:2181" />
 	<dubbo:monitor protocol="registry" />
-	<dubbo:reference id="userService" interface="boot.dubbo.api.UserService"   protocol="rest"/>
+	<dubbo:reference id="userService" interface="boot.dubbo.api.UserService"   protocol="dubbo"/>
 </beans>

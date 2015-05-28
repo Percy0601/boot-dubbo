@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<contextName>UAAS-CONSOLE</contextName>
+
+	<include resource="org/springframework/boot/logging/logback/base.xml" />
+	<!-- include resource="org/springframework/boot/logging/logback/console-appender.xml" 
+		/> -->
+
+<!-- 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern> %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender> -->
+
+
+	<root level="INFO">
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+	<!-- logback为java中的包 -->
+	<logger name="uaas" />
+
+	<!--logback.LogbackDemo：类的全路径 -->
+	<logger name="uaas.controller.RoleController" level="DEBUG"
+		additivity="false">
+		<appender-ref ref="CONSOLE" />
+	</logger>
+
+</configuration>

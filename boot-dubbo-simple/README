@@ -1,0 +1,15 @@
+这里想跟spring-boot集成，使用dubbo最小的依赖。<br>
+参见dubbo官方这里：http://dubbo.io/User+Guide-zh.htm#UserGuide-zh-%E5%BF%85%E9%9C%80%E4%BE%9D%E8%B5%96<br>
+这里所有依赖都是换照Dubbo缺省配置选的，这些缺省值是基于稳定性和性能考虑的。<br>
+
+    log4j.jar和commons-logging.jar日志输出包。<br>
+        可以直接去掉，dubbo本身的日志会自动切换为JDK的java.util.logging输出。<br>
+        但如果其它三方库比如spring.jar间接依赖commons-logging，则不能去掉。<br>
+    javassist.jar 字节码生成。<br>
+        如果<dubbo:provider proxy="jdk" />或<dubbo:consumer proxy="jdk" />，以及<dubbo:application compiler="jdk" />，则不需要。<br>
+    spring.jar 配置解析。<br>
+        如果用ServiceConfig和ReferenceConfig的API调用，则不需要。<br>
+    netty.jar 网络传输。<br>
+        如果<dubbo:protocol server="mina"/>或<dubbo:protocol server="grizzly"/>，则换成mina.jar或grizzly.jar。<br>
+        如果<protocol name="rmi"/>，则不需要。<br>
+
