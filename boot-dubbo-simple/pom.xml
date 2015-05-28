@@ -11,10 +11,11 @@
 	<artifactId>boot-dubbo-simple</artifactId>
 	<name>boot-dubbo-simple</name>
 	<url>http://maven.apache.org</url>
-
+	<packaging>war</packaging>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<start-class>demo.DemoApplication</start-class>
+		<start-class>boot.dubbo.simple.ApplicationBootstrap</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -92,6 +93,25 @@
 			<artifactId>jboss-el-api_3.0_spec</artifactId>
 			<version>1.0.0.Final</version>
 		</dependency>
+		<!-- zookeeper start -->
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.4.6</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-log4j12</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.github.sgroschupf</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>0.1</version>
+		</dependency>
+		<!-- zookeeper end -->
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -102,5 +122,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<packaging>war</packaging>
+
 </project>
