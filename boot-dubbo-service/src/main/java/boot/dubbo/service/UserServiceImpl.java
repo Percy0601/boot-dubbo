@@ -3,7 +3,9 @@ package boot.dubbo.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ws.rs.BeanParam;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +40,14 @@ public class UserServiceImpl implements UserService {
 			users.add(ut);
 		}
 		return users;
+	}
+
+	@Override
+	@POST
+	@Path("create")
+	public String create(@BeanParam User user) {
+		System.out.println(user.getName());
+		return "ksadjfsdf";
 	}
 
 }

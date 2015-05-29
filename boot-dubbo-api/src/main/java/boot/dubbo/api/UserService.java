@@ -2,6 +2,7 @@ package boot.dubbo.api;
 
 import java.util.List;
 
+import javax.ws.rs.BeanParam;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -21,4 +22,7 @@ public interface UserService {
     @Path("findAll")
 	List<User> findAll();
 
+    @GET
+    @Path("create")
+	String create(@BeanParam User user);
 }

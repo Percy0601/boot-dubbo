@@ -21,4 +21,9 @@ public class UserServiceImpl implements UserService {
 		return users;
 	}
 
+	@Override
+	public String create(User user) {
+		return "userId:123df";
+	}
+
 }
