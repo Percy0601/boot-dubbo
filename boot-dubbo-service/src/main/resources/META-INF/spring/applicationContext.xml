@@ -8,6 +8,6 @@
 	<!--<dubbo:service interface="boot.dubbo.api.UserService" ref="userService"  protocol="rest"/> 
 	<bean id="userService" class="boot.dubbo.service.UserServiceImpl" />-->
 	
-    <dubbo:protocol name="rest" port="9090" threads="500" contextpath="services" server="netty" accepts="500"/>
+    <dubbo:protocol name="rest" port="9090" threads="500" contextpath="services" server="tomcat" accepts="500"/>
     <dubbo:protocol name="dubbo" />
 </beans>

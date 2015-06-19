@@ -1,4 +1,4 @@
-package boot.dubbo.infrastructure;
+package boot;
 
 import java.io.IOException;
 
