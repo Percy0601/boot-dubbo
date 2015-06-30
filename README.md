@@ -13,6 +13,7 @@ Spring Boot:<br>
 6、设计理念极其先进，很多思想来自OSGi，但是在现有技术的实现<br>
 缺点：<br>
 二次改造定制难<br>
+缺少成熟的SOA或者RPC框架<br>
 
 
 Dubbox:<br>
