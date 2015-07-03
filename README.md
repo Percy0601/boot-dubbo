@@ -40,3 +40,36 @@ Dubbox:<br>
 建议：<br>
 
     大家有机会一起维护Dubbox 模块化和微内核这个框架
+
+
+ ---------------------------------------
+ 
+ boot-dubbo-normal-client<br>
+
+ * 这个项目我想以一个第三方的项目使用dubbox
+ * 这个项目跟spring boot没有一点关系。
+ 
+如果仅仅测试dubbo:<br>
+ * boot-dubbo-simple
+ * boot-dubbo-simple-client
+
+上述两个项目就够用了<br>
+
+boot-dubbo-infrastructure<br>
+这个模块项目只与数据库相关，其中集成了Spring-Data-Jpa以及Mybatis<br>
+ * Spring-Data-Jpa一般负责增删改，这个及其简单
+ * Mybatis负责较为复杂的查询
+
+boot-dubbo-service<br>
+该项目依赖api和boot-dubbo-infrastructure<br>
+它要实现api约定的接口，另外依赖boot-dubbo-infrastructure对不同数据表的操作以及对事务的操作<br>
+
+boot-dubbo-web<br>
+该项目依赖api，它是dubbo的客户端，它通过调用api等于invoke到serice的服务上，从而实现了rpc的调用和服务治理。<br>
+
+说明：<br>
+ * service:一般我们的service瓶颈在IO或者数据库上，部署无需太多
+ * web:一般的压力在web上，如果很多用户并发，session以及转换都在web上，web建议多部署几台
+ * 
+ 
+
