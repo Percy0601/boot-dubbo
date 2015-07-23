@@ -71,5 +71,9 @@ boot-dubbo-web<br>
  * service:一般我们的service瓶颈在IO或者数据库上，部署无需太多
  * web:一般的压力在web上，如果很多用户并发，session以及转换都在web上，web建议多部署几台
 
+--------------------------------------
+注释：<br>
+ * 在实际项目的架构中，Service和Infrastrature(DAO)之间应该还需要一层，就是ProxyDao那么这一层应该在Infrastrature这个当中
+
  
 
