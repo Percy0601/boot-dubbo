@@ -62,8 +62,8 @@ Dubbox:<br>
  * 这个项目跟spring boot没有一点关系。
  
 如果仅仅测试dubbo:<br>
- * boot-dubbo-simple
  * boot-dubbo-simple-client
+ * boot-dubbo-simple
 
 上述两个项目就够用了<br>
 
@@ -88,4 +88,5 @@ boot-dubbo-web<br>
  * 在实际项目的架构中，Service和Infrastrature(DAO)之间应该还需要一层，就是ProxyDao那么这一层应该在Infrastrature这个当中
 
  
-
+### JPA:
+最后我想说一下JPA这个事情，无论大家最终是否使用JPA，即便使用MyBatis中间件，也会有Entity概念，当然MyBatis理论会有很多的VO对象，我想表达的就是既然这样还不如使用JPA的自动生成表结构这个特性来达到开箱即用（不用再维护数据库表结构），直接安装就可以使用项目，减少了维护工作量。如果真的不需要JPA在项目的运行时阶段（生成表以后）可以删除该配置模块。Spring Boot所带来的一切真的就是这么简单容易。
